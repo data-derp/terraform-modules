@@ -10,6 +10,6 @@ resource "aws_glue_crawler" "this" {
 
   s3_target {
     path = "s3://${var.project-name}-${var.module-name}/${var.submodule-name}"
-    exclusions = ["*.egg", "*.py", "athena/**", "Unsaved/**", "*.csv"]
+    exclusions = ["*.egg", "*.py", "athena/**", "Unsaved/**", "*.csv", "spark_logs/**"]
   }
 }
